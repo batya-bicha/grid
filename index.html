@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            animation: a1 50s infinite alternate;
+        }
+
+        @keyframes a1 {
+            0% {
+                background: oldlace;
+            }
+
+            10% {
+                background: palegoldenrod;
+            }
+
+            20% {
+                background: palegreen;
+            }
+
+            30% {
+                background: paleturquoise;
+            }
+
+            40% {
+                background: palevioletred;
+            }
+
+            50% {
+                background: peachpuff;
+            }
+
+            60% {
+                background: pink;
+            }
+
+            70% {
+                background: plum;
+            }
+
+            80% {
+                background: powderblue;
+            }
+
+            90% {
+                background: purple;
+            }
+
+            100% {
+                background: blueviolet;
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 24vh);
+            grid-gap: 2px;
+            max-width: 1000px;
+            margin: 10px auto;
+            color: #fff;
+        }
+
+        .container div {
+            border: 1px aquamarine solid;
+            border-radius: 5px;
+            background: aliceblue;
+        }
+
+        .container div {
+            width: 100%;
+            position: relative;
+        }
+
+        .container div::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0;
+            top: 0;
+            transition: opacity 0.6s;
+            opacity: 0;
+        }
+
+        .container div:hover::after {
+            opacity: 1;
+        }
+
+
+        .container div:nth-child(1) {
+            background: url(images/1.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(2) {
+            background: url(images/2.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(3) {
+            background: url(images/3.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(4) {
+            background: url(images/4.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(5) {
+            background: url(images/6.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(6) {
+            background: url(images/5.jpg) 0 0/100% 100% no-repeat;
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+
+        .container div:nth-child(7) {
+            background: url(images/7.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(8) {
+            background: url(images/8.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(9) {
+            background: url(images/9.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(10) {
+            background: url(images/10.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        .container div:nth-child(11) {
+            background: url(images/11.jpg) 0 0/100% 100% no-repeat;
+        }
+
+        @media (max-width: 1000px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 24vh);
+                grid-gap: 2px;
+                max-width: 600px;
+                margin: 10px auto;
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(12, 150px);
+                grid-gap: 2px;
+                max-width: 400px;
+                margin: 10px auto;
+                color: #fff;
+            }
+
+            .container div:nth-child(6) {
+                background: url(/images/5.jpg) 0 0/100% 100% no-repeat;
+                grid-column: 1/2;
+                grid-row: 2/4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, pariatur.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, a.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, assumenda.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, dolorum!</div>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, perspiciatis!</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, nulla?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro.</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, fuga.</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, ratione.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, quasi?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, autem?</div>
+    </div>
+</body>
+
+</html>
